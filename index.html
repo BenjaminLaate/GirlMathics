@@ -1,1 +1,157 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girl Math Calculator</title>
+    <script>
+        function navigate(page) {
+            const content = document.getElementById("content");
+
+            switch (page) {
+                case 'clothes':
+                    content.innerHTML = `
+                        <button onclick="navigate('jacket')">Jacket</button>
+                        <button onclick="navigate('shirts')">Shirts</button>
+                    `;
+                    break;
+                case 'makeUp':
+                    content.innerHTML = `
+                        <button onclick="navigate('niceM')">Nice M</button>
+                        <button onclick="navigate('uglyM')">Ugly M</button>
+                    `;
+                    break;
+                case 'events':
+                    content.innerHTML = `
+                        <p class="questions">Type of event</p>
+                        <button onclick="navigate('fun')">Fun</button>
+                        <button onclick="navigate('concert')">Concert</button>
+                    `;
+                    break;
+                case 'jacket':
+                    content.innerHTML = `
+                        <button onclick="navigate('niceOne')">Nice One</button>
+                        <button onclick="navigate('uglyOne')">Ugly One</button>
+                    `;
+                    break;
+                case 'niceM':
+                    content.innerHTML = `
+                        <button onclick="navigate('yes')">Yes</button>
+                        <button onclick="navigate('no')">No</button>
+                    `;
+                    break;
+
+                        case 'concert':
+                            content.innerHTML = `
+                                <p class="questions">Is this concert important for you?</p>
+                                <button onclick="navigate('yImportant concert')">Yes</button>
+                                <button onclick="navigate('nImportant concert')">No</button>
+                            `;
+                            break;
+
+                                case 'yImportant concert':
+                                    content.innerHTML = `
+                                        <p class="questions">Does it cost more than 50?</p>
+                                        <button onclick="navigate('expensive concert')">Yes</button>
+                                        <button onclick="navigate('cheap concert')">No</button>
+                                    `;
+                                    break;
+
+                                        case 'expensive concert':
+                                            content.innerHTML = `
+                                                <p class="questions">Are there extra costs involved?</p>
+                                                <button onclick="navigate('extraCost concert expensive')">Yes</button>
+                                                <button onclick="navigate('noExtraCost concert expensive')">No</button>
+                                            `;
+                                            break;
+
+                                                    case 'extraCost concert expensive':
+                                                    content.innerHTML = `
+                                                        <p class="questions">Do you have a discount available?</p>
+                                                        <button onclick="navigate('extraCost concert discount')">Yes</button>
+                                                        <button onclick="navigate('extraCost concert noDiscount')">No</button>
+                                                    `;
+                                                    break;
+
+                                                            case 'extraCost concert discount':
+                                                            content.innerHTML = `
+                                                                <p>Go for it!</p>
+                                                                `;
+                                                            break;
+
+                                                            case 'extraCost concert noDiscount':
+                                                            content.innerHTML = `
+                                                                <p class="questions">Can someone else pay for the ticket so that you can pay them back later?</p>
+                                                                <button onclick="navigate('extraCost concert noDiscount payBack')">Yes</button>
+                                                                <button onclick="navigate('extraCost concert noDiscount noPayBack')">No</button>
+                                                            `;
+                                                            break;
+
+                                                                    case 'extraCost concert noDiscount payBack':
+                                                                    content.innerHTML = `
+                                                                        <p>Go for it!</p>
+                                                                        `;
+                                                                    break;
+
+                                                                    case 'extraCost concert noDiscount noPayBack':
+                                                                    content.innerHTML = `
+                                                                        <p>Don't buy (this time)</p>
+                                                                    `;
+                                                                    break;
+
+                                                    case 'noExtraCost concert expensive':
+                                                    content.innerHTML = `
+                                                        <p>Jabba</p>
+                                                    `;
+                                                    break;
+
+                                            
+                                        case 'cheap concert':
+                                            content.innerHTML = `
+                                            <p>Jabba</p>
+                                            `;
+                                            break;
+
+                                case 'nImportant concert':
+                                    content.innerHTML = `
+                                    <p>Jabba</p>
+                                    `;
+                                    break;
+
+                case 'yes':
+                    content.innerHTML = `<p>Jabba</p>`;
+                    break;
+                case 'no':
+                case 'little':
+                    content.innerHTML = `<p>No significant reaction.</p>`;
+                    break;
+                case 'uglyOne':
+                case 'uglyM':
+                    content.innerHTML = `<p>This is the less preferred option.</p>`;
+                    break;
+                case 'shirts':
+                    content.innerHTML = `<p>Shirts page (You can add more here)</p>`;
+                    break;
+                case 'niceOne':
+                    content.innerHTML = `<p>Ok dokey mother fokey</p>`;
+                    break;
+                default:
+                    content.innerHTML = `
+                        <button onclick="navigate('clothes')">Clothes</button>
+                        <button onclick="navigate('makeUp')">Make-up</button>
+                        <button onclick="navigate('events')">Events</button>
+                    `;
+            }
+        }
+    </script>
+</head>
+
+<body onload="navigate('')">
+    <div id="content">
+        <!-- Buttons will be injected here -->
+    </div>
+    
+</body>
+
+</html>
