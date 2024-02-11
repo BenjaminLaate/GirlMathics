@@ -102,10 +102,18 @@
 
                                                     case 'noExtraCost concert expensive':
                                                     content.innerHTML = `
-                                                        <p>Jabba</p>
+                                                        <p>Is it possible to go to this concert again soon? (Within a year?)</p>
+                                                        <button onclick="navigate('noExtraCost concert expensive SAME')">Yes</button>
+                                                        <button onclick="navigate('noExtraCost concert expensive SAME')">No</button>
                                                     `;
                                                     break;
-
+                                                    
+                                                            case 'sonoExtraCost concert expensive SAME':
+                                                            content.innerHTML = `
+                                                                <p>Go for it!</p>
+                                                            `;
+                                                            break;
+                                                            
                                             
                                         case 'cheap concert':
                                             content.innerHTML = `
