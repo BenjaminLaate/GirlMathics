@@ -2,16 +2,44 @@
 <html lang="en">
 
 <head>
+    <style>
+        /* Basic button styling */
+        .link-button {
+            display: inline-block;
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+    
+        .link-button:hover {
+            background-color: #45a049; /* Darker green effect on hover */
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Girl Math Calculator</title>
+    <script src="events.js"></script>
+    <script src="clothes.js"></script>
+    <script src="make-up.js"></script>
     <script src="mainScript.js"></script>
+
 </head>
 
 <body onload="navigate('')">
-    <div id="content">
+    <a href="clothes.html" class="link-button">Clothes</a>
+    <a href="make-up.html" class="link-button">Make-up</a>
+    <a href="events.html" class="link-button">Events</a>
+    <!-- div id="content">
         <!-- Buttons will be injected here -->
-    </div>
+     <!-- </div>-->
     
     <p>Foreløpig funker kun noe på konsert</p>
 
