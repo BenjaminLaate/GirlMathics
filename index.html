@@ -68,7 +68,7 @@
 
                                                     case 'extraCost concert expensive':
                                                     content.innerHTML = `
-                                                        <p class="questions">Do you have a discount available?</p>
+                                                        <p class="questions">Do you have a discount for at least 20% off available</p>
                                                         <button onclick="navigate('extraCost concert discount')">Yes</button>
                                                         <button onclick="navigate('extraCost concert noDiscount')">No</button>
                                                     `;
@@ -110,16 +110,52 @@
                                                     
                                                             case 'noExtraCost concert expensive SAME':
                                                             content.innerHTML = `
-                                                                <p>Go for it!!</p>
+                                                                <p>Go for it!</p>
                                                             `;
                                                             break;
                                                             
                                             
                                         case 'cheap concert':
                                             content.innerHTML = `
-                                            <p>Jabba</p>
+                                                <p class="questions">Are there extra costs involved?</p>
+                                                <button onclick="navigate('extraCost concert cheap')">Yes</button>
+                                                <button onclick="navigate('noExtraCost concert cheap')">No</button>
                                             `;
                                             break;
+
+                                                case 'extraCost concert cheap':
+                                                content.innerHTML = `
+                                                    <p class="questions">Is it possible for you to share these expenses with someone else?</p>
+                                                    <button onclick="navigate('extraCost concert cheap share')">Yes</button>
+                                                    <button onclick="navigate('extraCost concert cheap noShare')">No</button>
+                                                `;
+
+                                                break;
+
+                                                        case 'extraCost concert cheap share':
+                                                        content.innerHTML = `
+                                                            <p>Go for it!</p>
+                                                        `;
+                                                        break;
+
+                                                        case 'extraCost concert cheap noShare':
+                                                        content.innerHTML = `
+                                                            <p class="questions">Do you have a discount for at least 20% off available?</p>
+                                                            <button onclick="navigate('extraCost concert cheap noShare discount')">Yes</button>
+                                                            <button onclick="navigate('extraCost concert cheap noShare noDiscount')">No</button>
+                                                        `;
+
+                                                                case 'extraCost concert cheap noShare discount':
+                                                                content.innerHTML = `
+                                                                    <p>Go for it!</p>
+                                                                `;
+                                                                break;
+
+                                                                case 'extraCost concert cheap noShare noDiscount':
+                                                                    content.innerHTML = `
+                                                                    <p>Don't buy (this time)</p>
+                                                                `;
+                                                                break;
 
                                 case 'nImportant concert':
                                     content.innerHTML = `
