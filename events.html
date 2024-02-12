@@ -2,10 +2,31 @@
 <html lang="en">
 
 <head>
+    <style>
+        /* Basic button styling */
+        .link-button {
+            display: inline-block;
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+    
+        .link-button:hover {
+            background-color: #45a049; /* Darker green effect on hover */
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Girl Math Calculator</title>
-    <script src="events.js"></script>
+    <script src="events/events.js"></script>
     <script>
         if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
           window.location.href = 'index.html';
@@ -15,12 +36,15 @@
 
 <body onload="navigate('')">
     <h1 style="padding-bottom: 30px;">Events</h1>
-    <div id="content">
+    <a href="clothes.html" class="link-button">Clothes</a>
+    <a href="make-up.html" class="link-button">Make-up</a>
+    <a href="events/concert.html" class="link-button">Concert</a>
+    <!--<div id="content">
         <!-- Buttons will be injected here -->
-    </div>
+    <!--</div>-->
     
 
-    <img style="padding-top: 30px;" src="https://pics.craiyon.com/2023-10-13/dc4308d36a604b7bbedde1523d85fc60.webp" alt="My web image" width="20%">
+    <imgs style="padding-top: 30px;" src="https://pics.craiyon.com/2023-10-13/dc4308d36a604b7bbedde1523d85fc60.webp" alt="My web image" width="20%">
 
 
 </body>

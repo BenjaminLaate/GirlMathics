@@ -4,6 +4,9 @@ function navigate(page) {
     switch (page) {
 
                 case 'concert':
+                    // Make initial text disappear
+                    initialText.classList.add('hidden');
+
                     content.innerHTML = `
                         <p class="questions">Is this concert important for you?</p>
                         <button class="qButton" onclick="navigate('yImportant concert')">Yes</button>
@@ -131,7 +134,8 @@ function navigate(page) {
 
         default:
             content.innerHTML = `
-                <button class="qButton" onclick="navigate('concert')">Concert</button>
+                <button class="qButton" onclick="navigate('yImportant concert')">Yes it is!</button>
+                <button class="qButton" onclick="navigate('nImportant concert')">Not really</button>
             `;
     }
 }
